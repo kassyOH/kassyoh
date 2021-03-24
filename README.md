@@ -8,7 +8,7 @@
     - Illustrator
     - Visual Studio Code
     - Atom  
-    - 
+    
 <br>
 ---
 <br>
