@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 웹페이지 정보 -->
+  <meta name="author" content="portfolio">
+  <meta name="keywords" content="portfolio,personal portfolio,web portfolio,design port folio,포트폴리오,개인 포트폴리오,웹 포트폴리오,디자인 포트폴리오">
+  <meta name="discription" content="풀스택 개발자를 꿈꾸는 초보 웹퍼블리셔/디자이너의 포트폴리오">
+  <meta name="copyright" content="OH Heo Jeong">
+  <!-- 오픈그래픽 -->
+  <meta property="og:title" content="portfolio">
+  <meta property="og:url" content="http://kassy.dothome.co.kr/kassy">
+  <meta property="og:image" content="./images/ogimage.jpg">
+  <meta property="og:discription" content="풀스택 개발자를 꿈꾸는 초보 웹퍼블리셔/디자이너의 포트폴리오">
+  <!-- 트위터 -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="portfolio">
+  <meta name="twitter:url" content="http://kassy.dothome.co.kr/kassy">
+  <meta name="twitter:image" content="./images/ogimage.jpg">
+  <meta name="twitter:discription" content="풀스택 개발자를 꿈꾸는 초보 웹퍼블리셔/디자이너의 포트폴리오">
+  
+  <title>허정 포트폴리오</title>
+
+  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  
+  <!-- START HERE -->
+  <link rel="stylesheet" href="./css/form.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- index style -->
+  <!-- <link rel="stylesheet" href="./css/index.css"> -->
+
+  <style>
+  
+    /* 스킵스타일 */
+    .skip>a{
+      padding:10px 20px;
+      background-color:#000;
+      color:#fff;
+      position:fixed;
+      left:50%;
+      top:0;
+      transform:translate(-50%,-100%);
+      transition:transform 0.1s;
+      z-index: 10;
+    }
+    .skip>a:focus{
+      transform:translate(-50%,0%);
+      }
+
+    /* 기본스타일 */
+    .clearfix::after{
+      content: '';
+      display:block;
+      clear:both;
+    }
+    .wrap{
+      width:100%;
+      margin: 0 auto;
+      overflow:hidden;
+      position: relative;
+    }
+    h2{
+      margin: 50px 50px;
+      font-size: 34px;
+      font-weight: 800;
+      text-shadow: 1px 1px 1px black;
+    }
+    section{
+      width: 100%;
+      margin:0 auto 50px;
+    }
+    
+    
+
+    /* header 스타일 */
+    .header{
+      width:100%;
+      padding: 10px 5%;
+      position: fixed;
+      z-index: 1;
+      background-color: transparent;
+      transition:0.3s;
+    }
+    .header.active{
+      border-bottom: 4px solid darkorange;
+      background-color: rgba(255,255,255,0.85);
+    }
+    .header .main_logo{
+      padding-top:0;
+      float:left;
+    }
+    .header .main_logo>a{
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 2px 2px 2px black;
+    }
+    .header.active .main_logo>a{
+      color: #000;
+      text-shadow:none;
+    }
+    .header nav{
+      position:fixed;
+      left:0;
+      right:0;
+      top:49px;
+      bottom:0;
+      display:none;
+      background-color:#fff;      
+      overflow:hidden;
+      z-index:5 
+    }
+    .header nav .main_nav{
+      padding:0 5%
+    }
+    .header nav .main_nav>li{
+      padding:1rem 0;
+      border-bottom:1px solid #ccc;
+    }
+    .header nav .main_nav>li:last-child{
+      border:none
+    }
+    .header nav .main_nav>li a{
+      font-size:1.2rem;
+      color:#000;
+    }
+    .header nav .main_nav>li:hover a
+    ,.header.active nav .main_nav>li:hover a{
+      color:darkorange;
+    }
+    
+    .header .tgl_btn{
+      float:right;
+      cursor:pointer;
+      margin-top:5px;
+    }
+    .header .tgl_btn>div{
+      width: 25px;
+      height: 3px;
+      margin-bottom:5px;
+      background-color: #fff;
+      text-indent: -9999px;
+      box-shadow: 2px 2px 2px black;
+    }
+    .header.active .tgl_btn>div{
+      background-color: #000;
+      box-shadow:none
+    }
+    .header .tgl_btn>div:last-child{
+      margin-bottom: 0;
+    }
+    /* slider */
+    .slider{
+      width:100%;
+      position: relative;
+      z-index:0;
+    }
+    .swiper-button-prev:after,.swiper-button-next:after{
+      font-size:20px;
+      color:#fff;
+    }
+
+
+    /* Iam 스타일 */
+    .i_am{
+      width:100%;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+    .i_am .container{
+      margin-bottom: 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .iam_imgbox{
+      width: 50%;
+      margin-bottom: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+    }
+    .iam_imgbox .info_img{
+      margin-bottom: 20px;
+    }
+    .iam_imgbox h3{
+      margin-bottom: 20px;
+    }
+    .iam_imgbox h3>span{
+      padding: 3px;
+      font-size:18px;
+      font-weight: 600;
+      color:#fff;
+      text-shadow: 1px 1px 1px black;
+      background-color: rgba(255, 140, 0, 0.7);
+      cursor: pointer;
+    }
+    .iam_imgbox h3>span:hover{
+      font-size:22px;
+      transition:0.3s;
+    }
+    
+    .iam_imgbox p{
+      font-size: 14px;
+      text-align: justify;
+    }
+    .iam_txt{
+      margin: 0 auto;
+      padding: 0 10%;
+      opacity: 0;
+      transform: translateX(1000px);
+      transition: 0.8s;
+    }
+    .iam_txt.active{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .iam_txt div{
+      margin-bottom: 20px;
+    }
+    .iam_txt ul{
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      
+    }
+    .iam_txt li{
+      font-size: 14px;
+      list-style-type: disc;
+    }
+
+    /* skills 스타일 */
+    .skill{
+      background-color: rgba(180, 180, 180, 0.4);
+    }
+    .skill h2{
+      padding-top: 5%;
+    }
+    .skill .skill_top .p_box{
+      width:100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .skill .skill_top .p{
+      margin-bottom: 20px;
+      padding: 0 20px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .skill .skill_top .p span{
+      padding: 3px;
+      font-weight: 700;
+      background-color: rgba(255, 140, 0, 0.7);
+    }
+    .skill .skill_top .p2{
+      margin-bottom: 50px;
+      /* padding: 0 3px 0 10px; */
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .skill .content ul{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+    }
+    .skill .content ul li{
+      width:40%;
+      margin-bottom:30px;
+    }
+    
+    .skill .content ul li:hover .skill_img{
+      filter:grayscale(0);
+      transform:rotate(15deg) scale(1.1);
+    }
+    .skill_img{
+      width:25%;
+      margin:0 auto 10px;
+      filter:grayscale(1);
+    }
+    .skill_txt{
+      font-size:14px;
+      text-align:center;
+      color:#000;
+    }
+
+
+    /* portfolio 스타일 */
+    .port_content h2,
+    .port_content>p{
+      opacity:1;
+      transform:none;
+    }
+    .port_content p{
+      margin-bottom: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .port_content .img_box{
+      margin-bottom:0;
+    }
+    .port_content ul{
+      display:flex;
+      flex-flow:column wrap;
+      align-items:center;
+    }
+    .port_content ul li{
+      width:45%;
+      margin-bottom:60px;
+      cursor:pointer;
+    }
+    .port_img{
+      margin-bottom:10px;
+      position:relative;
+      overflow:hidden;
+    }
+    .port_img::before,
+    .port_img::after{
+      content:'';
+      display:block;
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      background-color:rgba(255, 140, 0, 0.5);
+      transform:translateY(100%);
+      transition:0.3s;
+    }
+    .port_img::after{
+      content:'클릭하시면 해당 프로젝트로 이동합니다.';
+      background-color:transparent;
+      color:#fff;
+      padding:1rem;
+      font-size:1.2rem;
+      text-shadow: 2px 2px 2px black;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      transform:translateY(0); 
+      opacity:0;
+      transition-delay:0.3s;     
+    }
+    .port_img:hover::before,
+    .port_img:hover::after{
+      transform:translateY(0%);
+      opacity:1;
+    }
+    .port_txt h3{
+      margin-bottom:10px;
+      font-size:18px;
+      font-weight:700;
+      text-align:center;
+      color:#333;
+    }
+    .port_txt p{
+      font-size:15px;
+      text-align:center;
+      line-height:18px;
+      font-weight: 400;
+      color:#999;
+    }
+
+    /* contact 스타일 */
+    .contact{
+      background-color: rgba(180, 180, 180, 0.4);
+    }
+    .contact h2{
+      padding-top: 5%;
+    }
+    .contact .contact_content{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    .contact .contact_content li a{
+      width: 100%;
+      padding-bottom: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+    .contact .contact_content li a p{
+      width: 80%;
+      padding-left: 3%;
+    }
+    .cont_img{
+        width: 15%;
+    }
+    .contact .contact_content li a img{
+      width:100%;
+    }
+    .contact .contact_content li:hover a .cont_img img{
+      transform: scale(1.1);
+    }
+    .contact .contact_content li:hover span{
+      background-color:rgba(255, 140, 0, 0.5);
+    }
+    
+
+    /* form 스타일 */
+    form{
+      margin: 2em;
+    }
+    aside {
+      background: rgba(253, 244, 227, 0.7)	; 
+      padding: 0.3em 1em;
+      border-radius: 3px;
+      color: #fff;
+      margin: 2em;
+    }
+    .contact aside>p{
+      font-size: 14px;
+      font-weight: 500;
+    }
+    textarea {
+      width: 100%;
+    }
+    input{
+      background-color: #fff;
+    }
+    .spam_txt input{
+      width: 300px;
+    }
+    .content-head {
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 1em 1em 1em;
+    }
+    .is-center {
+      text-align: center;
+    }
+    .button-success {
+      color: #333;
+      margin-top: 2rem;
+      border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      background:#ccc;
+    }
+    .button-xlarge {
+      font-size: 125%;
+    }
+    #name, #email {
+      width: 50%;
+    }
+    .honeypot-field {
+      display: none;
+    }
+    .thankyou_message p{
+      text-align: center;
+    }
+    /* footer 스타일 */
+     footer{
+      width: 100%;
+      height: 80px;
+      padding-top: 20px;
+      background-color:rgba(180, 180, 180, 0.4)
+    }
+    address p{
+      padding-left: 1rem;
+      position: absolute;
+      left:0;
+      font-style: normal;
+      font-size: 12px;
+      text-align: left;
+      color: #333;
+    }
+
+/* Top button 스타일 */
+  .go_main{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .go_main.active{
+    opacity: 1;
+  }
+  .go_main>a{
+    padding: 5px 2px;
+    border: 3px solid darkorange;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333; 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .go_main .main_line{
+    position: absolute;
+    right:0;
+    bottom:0;
+    animation-name: ex01;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+  .go_main .main_line>.line {
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid rgba(51, 51, 51, 0.5);
+    border-left: 3px solid rgba(51, 51, 51, 0.5);
+    position: absolute;
+    right: 12px;
+    bottom: 30px;
+    transform: rotate(45deg);
+  }
+  .go_main .main_line>div:first-child{
+    border-color: rgba(51, 51, 51, 0.25);
+    bottom: 40px;
+  }
+  .go_main .main_line>div:last-child{
+    border-color: rgba(51, 51, 51, 0.75);
+    bottom:20px;
+  }
+  @keyframes ex01{
+      0%{
+          opacity: 1;
+          bottom:25px;
+      }            
+      100%{
+          opacity: 0.2;
+          bottom: 70px;
+      }
+  }
+  
+  
+
+
+
+
+/* ======================================================태블릿 */
+@media(min-width: 768px){
+
+    h2{
+    margin: 50px 30px;
+    font-size: 45px;
+    font-weight: 700;
+    }
+    /* header 스타일 */
+    .header .main_logo{
+    padding-top:5px;
+    }
+    .header .main_logo>a{
+    font-size: 35px;
+    }
+    .header nav{
+    display:block!important;
+    float:right;
+    position:static;
+    background-color:transparent;
+    }
+    .header nav .main_nav{padding:0%}
+    .header nav .main_nav>li{
+    float:left;
+    border:none;
+    margin-right:1.5rem
+    }
+    .header nav .main_nav>li:last-child{margin-right:0}
+    .header nav .main_nav>li a{
+    color:#fff;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 3px 3px 3px black;
+    }
+    .header.active nav .main_nav>li a {
+    color: #000;
+    text-shadow: none;
+    }
+    .header .tgl_btn{display:none}
+
+    .swiper-button-prev:after,.swiper-button-next:after{
+    font-size:30px;
+    }
+
+    /* Iam 스타일 */
+    .i_am{
+    width: 90%;
+    }
+    .i_am .container{
+    flex-direction: row;
+    }
+    .iam_imgbox{
+    float: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom:none;
+    }
+    .info_img img{
+    width: 70%;
+    height: 70%;
+    }
+    .iam_imgbox p{
+    padding: 0 10%;
+    text-align: center;
+    }
+    .iam_txt{
+    float:right;
+    width: 50%;
+    padding:2% 0 0 5%;
+    }
+
+    /* skill 스타일 */
+    .skill h2{
+    margin-bottom: 20px;
+    padding: 3% 0 0 4.2%;
+    }
+    .skill .skill_top .p{
+    font-size: 22px;
+    }
+    .skill .skill_top span{
+    font-size: 24px;
+    }
+    .skill .skill_top .p2{
+    font-size: 16px;
+    }
+
+    .skill .content ul li{
+    width: 30%;
+    }
+    .skill_img{
+    width:30%;
+    }
+
+
+    /* portfolio 스타일 */
+    .portfolio{width: 90%;}
+    .port_content ul{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+    .port_content ul li{
+    width:40%;
+    margin-bottom:30px;
+    
+    }
+    .port_content ul li p{
+    height: 72px;
+    font-weight: 500;
+    }
+
+
+    /* contact 스타일 */
+
+    .contact .contact_content{
+    flex-flow: row nowrap;
+    }
+    .contact .contact_content li a{
+    height: 100%;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .contact .contact_content li a p{
+    padding-bottom: 20%;
+    }
+    .cont_img{
+     width: 35%;
+     margin-bottom: 50px;
+    }
+    .contact .contact_content li :hover span{
+    background-color:rgba(255, 140, 0, 0.5);
+    }
+
+    /* Top button 스타일 */
+    .go_main>a{
+    padding: 12px 7px;
+    border: 5px solid darkorange;
+    font-size: 18px;
+    font-weight: 600;
+    }
+    .go_main .main_line>.line {
+      width: 30px;
+      height: 30px;
+      right: 15px;
+      bottom: 35px;
+    }
+    .go_main .main_line>div:first-child{
+      bottom: 45px;
+    }
+    .go_main .main_line>div:last-child{
+      bottom: 25px;
+    }
+
+}
+
+
+
+/* ======================================================PC */
+@media(min-width:1200px){
+    .swiper-button-prev:after,.swiper-button-next:after{
+    font-size:40px;
+    }
+    /* header 스타일 */
+    .header .main_logo>a{
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 5px 5px 5px black;
+    }
+    .header nav .main_nav>li a{
+    font-size: 30px;
+    text-shadow: 5px 5px 5px black;
+    font-weight: 800;
+    }
+
+
+    /* i_Am 스타일*/
+    .i_am{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .iam_txt{
+    padding-top:3%;
+    }
+    .iam_txt li{
+        font-size: 18px;
+    }
+
+
+    /* skill 스타일 */
+    .skill{
+    height: 500px;
+    position: relative;
+    }
+    .skill h2{
+    padding-top: 0;
+    padding-left: 10%;
+    }
+    .skill .skill_top{
+        width:55%;
+        float: left;
+    }
+    .skill .skill_top .p_box{
+    padding-left:15%;
+    padding-top: 1%;
+    }
+    .skill .content .img_box ul{
+        width: 45%;
+        float:right; 
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        position: absolute;
+        top:25%;
+        right:0;
+    }
+    .skill_img{
+        width:35%;
+    }
+
+
+    /* port 스타일 */
+    .port_content ul{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .port_content ul li{
+    width:20%;
+    margin: 0;
+    }
+
+    /* contact 스타일 */
+    .cont_img{
+     width: 40%;
+    }
+}
+
+
+
+  </style>
+
+</head>
+<body>
+  <div class="wrap" id="wrap">
+      <div class="skip">
+        <a href="#about">내 소개 바로가기</a>
+        <a href="#skill">스킬 바로가기</a>
+        <a href="#portfolio">포트폴리오 바로가기</a>
+        <a href="#contact">연락처 바로가기</a>
+      </div>
+      <header class="header clearfix">
+        <h1 class="main_logo">
+          <a href="index.html">
+            Portfolio
+          </a>
+        </h1>
+        <nav>
+          <ul class="main_nav clearfix">
+            <li><a href="#i_am">I AM</a></li>
+            <li><a href="#skill">SKILLS</a></li>
+            <li><a href="#portfolio">WORK</a></li>
+            <li><a href="#contact">CONTACT ME</a></li>
+          </ul>
+        </nav>
+        <div class="tgl_btn">
+          <div>라인1</div>
+          <div>라인2</div>
+          <div>라인3</div>
+        </div>
+      </header>
+      <section class="slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/main_slider01.jpg" alt="slider01">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/main_slider02.jpg" alt="slider02">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/main_slider03.jpg" alt="slider03">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="i_am" id="i_am">
+        <h2>Who is Heojeong?</h2>
+        <div class="container">
+              <article class="iam_imgbox">
+                <div class="info_img">
+                  <img src="./images/iam_img.png" alt="iam_img">
+                </div>
+                <h3><span>Keypoint[진실된,성실한,열정적인]</span></h3>
+                <p>
+                  독립적인 자세로 언제나 모험을 두려워하지 않습니다.
+                  늘 배우는 마음으로 주변과 소통하며 불필요한 말보다
+                  확실한 성장으로서 보답하는 신입사원이 되겠습니다.
+                </p>
+              </article>
+              <article class="iam_txt">
+                <div class="emplo">
+                  <ul>✌🏽EMPLOYMENT HISTORY</ul>
+                    <li><b>2014-2017</b> 전반적 식 음료 관리 및 교육</li>
+                    <li><b>2018-2019</b> Chef</li>
+                    <li><b>2020-2020</b> (주)레드라인닷컴 해외선물 트레이더</li>
+                </div>
+                <div class="education">
+                  <ul>✌🏽EDUCATION</ul>
+                    <li><b>2010-2013.02</b> 덕문여자고등학교 졸업</li>
+                    <li><b>2013-2018.02</b> 동의대학교 외식산업경영학과 4년 졸업</li>
+                    <li><b>2018</b> CEBU CELC 어학연수 2개월</li>
+                    <li><b>2018-2020.01</b> 호주 워킹홀리데이</li>
+                    <li><b>2020.11-2021.03</b> 국제컴퓨터아카데미 UI&UX 디자이너 과정 수료</li>
+                </div>
+                <div class="cert">
+                  <ul>✌🏽CERTIFICATES</ul>
+                    <li><b>2014.07</b> 커피바리스타2급 자격증 취득</li>
+                    <li><b>2015.06</b> 조주기능사 자격증 취득</li>
+                    <li><b>2016.05</b> 1883 Bartender Championship 심사위원상 수상</li>     
+                    <li><b>2017.04</b> 운전면허 2종보통 취득</li>
+                </div>
+              </article>
+        </div>     
+      </section>
+      <section class="skill clearfix" id="skill">
+        <div class="content">
+          <div class="skill_top">
+            <h2>Skills</h2>
+            <div class="p_box">
+              <p class="p">
+                늘 발전하는 신입 UI&UX 디자이너 <span>오 허정</span> 입니다.
+              </p>
+              <p class="p2">
+                &bull; 포토샵을 이용 디자인 제작, 쇼핑몰의 상세페이지 제작 등이 가능합니다.<br>
+                &bull; 일러스트레이터를 이용, icon / CI / BI / 캐릭터 등 제작이 가능합니다.<br>
+                &bull; 웹 표준을 기반으로 웹 접근성에 충실한 웹 문서를 만들 수 있습니다.<br>
+                &bull; 트렌드를 충실히 반영한 레이아웃 구현 위해 flex, grid 등을 사용합니다.<br>
+                &bull; 플러그인 등을 배제, 바닐라스크립트로 이벤트를 작성할 수 있습니다.<br>
+                &bull; jQuery 메서드&플러그인 조합으로 최적의 Responsive 웹을 구현합니다.
+              </p>
+            </div>  
+          </div>
+          
+          <div class="img_box">
+            <ul>
+              <li>
+                <div class="skill_img">
+                  <img src="./images/ico_ps.svg" alt="포토샵">
+                </div>
+                <div class="skill_txt">
+                  PhotoShop
+                </div>
+              </li>
+              <li>
+                <div class="skill_img">
+                  <img src="./images/ico_ai.svg" alt="일러스트">
+                </div>
+                <div class="skill_txt">
+                  Illustrator
+                </div>
+              </li>
+              <li>
+                <div class="skill_img">
+                  <img src="./images/ico_html.svg" alt="HTML">
+                </div>
+                <div class="skill_txt">
+                  HTML
+                </div>
+              </li>
+              <li>
+                <div class="skill_img">
+                  <img src="./images/ico_css.svg" alt="CSS">
+                </div>
+                <div class="skill_txt">
+                  CSS
+                </div>
+              </li>
+              <li>
+                <div class="skill_img">
+                  <img src="./images/ico_js.svg" alt="javascript">
+                </div>
+                <div class="skill_txt">
+                  javaScript
+                </div>
+              </li>
+              <li>
+                <div class="skill_img">
+                  <img src="./images/ico_jquery.svg" alt="jquery">
+                </div>
+                <div class="skill_txt">
+                  jQuery
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>     
+      </section>
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="content port_content sec_content">
+            <h2 class="h2">WORKS</h2>
+            <p class="p">
+              기초 조사부터 퍼블리싱까지 
+              다양한 프로젝트를 만나보세요
+            </p>
+            <div class="img_box">
+              <ul>
+                <li class="hl_port">
+                  <div class="port_img">
+                    <img src="./images/port_megabox.png" alt="megabox">
+                  </div>
+                  <div class="port_txt">
+                    <h3>Megabox</h3>
+                    <p>
+                      반응형 웹 페이지<br>
+                      기획, 디자인, 제작
+                    </p>
+                  </div>
+                </li>
+                <li class="hl_port">
+                  <div class="port_img">
+                    <img src="./images/port_hansol.png" alt="hansol">
+                  </div>
+                  <div class="port_txt">
+                    <h3>Hansol</h3>
+                    <p>
+                      반응형 웹 페이지 리뉴얼
+                    </p>
+                  </div>
+                </li>
+                <li class="hl_port">
+                  <div class="port_img">
+                    <img src="./images/port_indigo.png" alt="indigo">
+                  </div>
+                  <div class="port_txt">
+                    <h3>Indigo</h3>
+                    <p>
+                      반응형 웹 페이지<br>
+                      기획, 디자인, 제작
+                    </p>
+                  </div>
+                </li>
+                <li class="hl_port">
+                  <div class="port_img">
+                    <img src="./images/port_mozilla.png" alt="mozilla">
+                  </div>
+                  <div class="port_txt">
+                    <h3>Mozilla</h3>
+                    <p>
+                      반응형 웹 페이지 제작
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2>Contact</h2>
+          <ul class="contact_content">
+            <li>
+              <a href="./doc/RESUME_KO.docx" download>
+                <div class="cont_img">
+                    <img src="./images/cont_icon_01.png" alt="Resume_KO">
+                </div>
+                <p> 자기소개서가 포함된 <span>한글 이력서</span>를 다운받아 보세요.</p>
+              </a>
+            </li>
+            <li>
+              <a href="./doc/RESUME_EN.docx" download>
+                <div class="cont_img">
+                    <img src="./images/cont_icon_02.png" alt="Resume_EN">
+                </div>
+                <p> 깔끔하고 간략하게 정리된 <span>영문 이력서</span>를 다운받아 보세요.</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.github.com/kassyOH/" target="_blank">
+                <div class="cont_img">
+                    <img src="./images/cont_icon_04.png" alt="github">
+                </div>
+                <p>모든 소스를 보고 싶으신 분들은 <span>깃허브</span>를 참조해 주세요.</p>
+              </a>
+            </li>
+          </ul>
+
+      </section>
+      <section class="form">
+          <h2 class="content-head is-center">Thanks for visiting My web site.</h2>
+          <aside>
+              <p>제 포트폴리오를 읽어주셔서 감사합니다.</p>
+              <p>추가적 문의사항이나, 연락이 필요할 시 아래의 Form을 사용해주세요.</p>
+          </aside>
+
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+        action="https://script.google.com/macros/s/AKfycbxgAvxcLXPgXPALzpo9ENQtLw_AA8jo7VwYUY_g5RzjlKlVsGA/exec">
+          <!-- change the form action to your script url -->
+
+          <div class="form-elements">
+            <fieldset class="pure-group">
+              <label for="name">Name: </label>
+              <input id="name" name="name" placeholder="성함을 입력해주세요." />
+            </fieldset>
+
+            <fieldset class="pure-group">
+              <label for="message">Message: </label>
+              <textarea id="message" name="message" rows="10"
+              placeholder="본문 내용을 입력해주세요."></textarea>
+            </fieldset>
+
+            <fieldset class="pure-group">
+              <label for="email"><em>Your</em> Email Address:</label>
+              <input id="email" name="email" type="email" value=""
+              required placeholder="email@email.com"/>
+            </fieldset>
+
+            <fieldset class="pure-group spam_txt">
+              <label for="color">What is your favorite Color?: </label>
+              <input id="color" name="color" placeholder="반드시 입력해주세요. (스팸방지용)" alt="spam_block" type="text"/>
+            </fieldset>
+
+            <fieldset class="pure-group honeypot-field">
+              <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+              <input id="honeypot" type="text" name="honeypot" value="" />
+            </fieldset>
+
+            <button class="button-success pure-button button-xlarge">
+              <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+          </div>
+
+          <!-- Customise the Thankyou Message People See when they submit the form: -->
+          <div class="thankyou_message" style="display:none;">
+            <p>👩🏽‍💻성공적으로 전송되었습니다.👩🏽‍💻<br>
+            연락해주셔서 감사드리며 곧바로 회신하겠습니다.</p>
+          </div>
+        </form>
+      </section>
+      <footer>
+        <address>
+          <p>
+            rodh11@kakao.com<br>
+            Copyright by 2021 Heojeong all rights reserved.
+          </p>
+        </address>
+      </footer>
+      <div class="go_main">
+        <a href="#wrap">
+          TOP
+        </a>
+        <div class="main_line">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+     
+      
+  </div>
+
+ <!-- 스크립트 -->
+  <script src="./js/jquery.min.js"></script>  
+  <script src="./js/prefixfree.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script data-cfasync="false" src="./js/form-submission-handler.js"></script>
+  <script>
+    txtTyping();
+  </script>
+  
+</body>
+</html>
