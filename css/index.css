@@ -1,0 +1,749 @@
+    /* 스킵스타일 */
+    .skip>a{
+      padding:10px 20px;
+      background-color:#000;
+      color:#fff;
+      position:fixed;
+      left:50%;
+      top:0;
+      transform:translate(-50%,-100%);
+      transition:transform 0.1s;
+      z-index: 10;
+    }
+    .skip>a:focus{
+      transform:translate(-50%,0%);
+      }
+
+    /* 기본스타일 */
+    .clearfix::after{
+      content: '';
+      display:block;
+      clear:both;
+    }
+    .wrap{
+      width:100%;
+      margin: 0 auto;
+      overflow:hidden;
+      position: relative;
+    }
+    h2{
+      margin: 50px 50px;
+      font-size: 34px;
+      font-weight: 800;
+      text-shadow: 1px 1px 1px black;
+    }
+    section{
+      width: 100%;
+      margin:0 auto 50px;
+    }
+    
+    
+
+    /* header 스타일 */
+    .header{
+      width:100%;
+      padding: 10px 5%;
+      position: fixed;
+      z-index: 1;
+      background-color: transparent;
+      transition:0.3s;
+    }
+    .header.active{
+      border-bottom: 4px solid darkorange;
+      background-color: rgba(255,255,255,0.85);
+    }
+    .header .main_logo{
+      padding-top:0;
+      float:left;
+    }
+    .header .main_logo>a{
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 2px 2px 2px black;
+    }
+    .header.active .main_logo>a{
+      color: #000;
+      text-shadow:none;
+    }
+    .header nav{
+      position:fixed;
+      left:0;
+      right:0;
+      top:49px;
+      bottom:0;
+      display:none;
+      background-color:#fff;      
+      overflow:hidden;
+      z-index:5 
+    }
+    .header nav .main_nav{
+      padding:0 5%
+    }
+    .header nav .main_nav>li{
+      padding:1rem 0;
+      border-bottom:1px solid #ccc;
+    }
+    .header nav .main_nav>li:last-child{
+      border:none
+    }
+    .header nav .main_nav>li a{
+      font-size:1.2rem;
+      color:#000;
+    }
+    .header nav .main_nav>li:hover a
+    ,.header.active nav .main_nav>li:hover a{
+      color:darkorange;
+    }
+    
+    .header .tgl_btn{
+      float:right;
+      cursor:pointer;
+      margin-top:5px;
+    }
+    .header .tgl_btn>div{
+      width: 25px;
+      height: 3px;
+      margin-bottom:5px;
+      background-color: #fff;
+      text-indent: -9999px;
+      box-shadow: 2px 2px 2px black;
+    }
+    .header.active .tgl_btn>div{
+      background-color: #000;
+      box-shadow:none
+    }
+    .header .tgl_btn>div:last-child{
+      margin-bottom: 0;
+    }
+    /* slider */
+    .slider{
+      width:100%;
+      position: relative;
+      z-index:0;
+    }
+    .swiper-button-prev:after,.swiper-button-next:after{
+      font-size:20px;
+      color:#fff;
+    }
+
+
+    /* Iam 스타일 */
+    .i_am{
+      width:100%;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+    .i_am .container{
+      margin-bottom: 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .iam_imgbox{
+      width: 50%;
+      margin-bottom: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+    }
+    .iam_imgbox .info_img{
+      margin-bottom: 20px;
+    }
+    .iam_imgbox h3{
+      margin-bottom: 20px;
+    }
+    .iam_imgbox h3>span{
+      padding: 3px;
+      font-size:18px;
+      font-weight: 600;
+      color:#fff;
+      text-shadow: 1px 1px 1px black;
+      background-color: rgba(255, 140, 0, 0.7);
+      cursor: pointer;
+    }
+    .iam_imgbox h3>span:hover{
+      font-size:22px;
+      transition:0.3s;
+    }
+    
+    .iam_imgbox p{
+      font-size: 14px;
+      text-align: justify;
+    }
+    .iam_txt{
+      margin: 0 auto;
+      padding: 0 10%;
+      opacity: 0;
+      transform: translateX(1000px);
+      transition: 0.8s;
+    }
+    .iam_txt.active{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .iam_txt div{
+      margin-bottom: 20px;
+    }
+    .iam_txt ul{
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      
+    }
+    .iam_txt li{
+      font-size: 14px;
+      list-style-type: disc;
+    }
+
+    /* skills 스타일 */
+    .skill{
+      background-color: rgba(180, 180, 180, 0.4);
+    }
+    .skill h2{
+      padding-top: 5%;
+    }
+    .skill .skill_top .p_box{
+      width:100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .skill .skill_top .p{
+      margin-bottom: 20px;
+      padding: 0 20px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .skill .skill_top .p span{
+      padding: 3px;
+      font-weight: 700;
+      background-color: rgba(255, 140, 0, 0.7);
+    }
+    .skill .skill_top .p2{
+      margin-bottom: 50px;
+      /* padding: 0 3px 0 10px; */
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .skill .content ul{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+    }
+    .skill .content ul li{
+      width:40%;
+      margin-bottom:30px;
+    }
+    
+    .skill .content ul li:hover .skill_img{
+      filter:grayscale(0);
+      transform:rotate(15deg) scale(1.1);
+    }
+    .skill_img{
+      width:25%;
+      margin:0 auto 10px;
+      filter:grayscale(1);
+    }
+    .skill_txt{
+      font-size:14px;
+      text-align:center;
+      color:#000;
+    }
+
+
+    /* portfolio 스타일 */
+    .port_content h2,
+    .port_content>p{
+      opacity:1;
+      transform:none;
+    }
+    .port_content p{
+      margin-bottom: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .port_content .img_box{
+      margin-bottom:0;
+    }
+    .port_content ul{
+      display:flex;
+      flex-flow:column wrap;
+      align-items:center;
+    }
+    .port_content ul li{
+      width:45%;
+      margin-bottom:60px;
+      cursor:pointer;
+    }
+    .port_img{
+      margin-bottom:10px;
+      position:relative;
+      overflow:hidden;
+    }
+    .port_img::before,
+    .port_img::after{
+      content:'';
+      display:block;
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      background-color:rgba(255, 140, 0, 0.5);
+      transform:translateY(100%);
+      transition:0.3s;
+    }
+    .port_img::after{
+      content:'클릭하시면 해당 프로젝트로 이동합니다.';
+      background-color:transparent;
+      color:#fff;
+      padding:1rem;
+      font-size:1.2rem;
+      text-shadow: 2px 2px 2px black;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      transform:translateY(0); 
+      opacity:0;
+      transition-delay:0.3s;     
+    }
+    .port_img:hover::before,
+    .port_img:hover::after{
+      transform:translateY(0%);
+      opacity:1;
+    }
+    .port_txt h3{
+      margin-bottom:10px;
+      font-size:18px;
+      font-weight:700;
+      text-align:center;
+      color:#333;
+    }
+    .port_txt p{
+      font-size:15px;
+      text-align:center;
+      line-height:18px;
+      font-weight: 400;
+      color:#999;
+    }
+
+    /* contact 스타일 */
+    .contact{
+      background-color: rgba(180, 180, 180, 0.4);
+    }
+    .contact h2{
+      padding-top: 5%;
+    }
+    .contact .contact_content{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    .contact .contact_content li a{
+      width: 100%;
+      padding-bottom: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+    .contact .contact_content li a p{
+      width: 80%;
+      padding-left: 3%;
+    }
+    .cont_img{
+        width: 15%;
+    }
+    .contact .contact_content li a img{
+      width:100%;
+    }
+    .contact .contact_content li:hover a .cont_img img{
+      transform: scale(1.1);
+    }
+    .contact .contact_content li:hover span{
+      background-color:rgba(255, 140, 0, 0.5);
+    }
+    
+
+    /* form 스타일 */
+    form{
+      margin: 2em;
+    }
+    aside {
+      background: rgba(253, 244, 227, 0.7)	; 
+      padding: 0.3em 1em;
+      border-radius: 3px;
+      color: #fff;
+      margin: 2em;
+    }
+    .contact aside>p{
+      font-size: 14px;
+      font-weight: 500;
+    }
+    textarea {
+      width: 100%;
+    }
+    input{
+      background-color: #fff;
+    }
+    .spam_txt input{
+      width: 300px;
+    }
+    .content-head {
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 1em 1em 1em;
+    }
+    .is-center {
+      text-align: center;
+    }
+    .button-success {
+      color: #333;
+      margin-top: 2rem;
+      border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      background:#ccc;
+    }
+    .button-xlarge {
+      font-size: 125%;
+    }
+    #name, #email {
+      width: 50%;
+    }
+    .honeypot-field {
+      display: none;
+    }
+    .thankyou_message p{
+      text-align: center;
+    }
+    /* footer 스타일 */
+     footer{
+      width: 100%;
+      height: 80px;
+      padding-top: 20px;
+      background-color:rgba(180, 180, 180, 0.4)
+    }
+    address p{
+      padding-left: 1rem;
+      position: absolute;
+      left:0;
+      font-style: normal;
+      font-size: 12px;
+      text-align: left;
+      color: #333;
+    }
+
+/* Top button 스타일 */
+  .go_main{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .go_main.active{
+    opacity: 1;
+  }
+  .go_main>a{
+    padding: 5px 2px;
+    border: 3px solid darkorange;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333; 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .go_main .main_line{
+    position: absolute;
+    right:0;
+    bottom:0;
+    animation-name: ex01;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+  .go_main .main_line>.line {
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid rgba(51, 51, 51, 0.5);
+    border-left: 3px solid rgba(51, 51, 51, 0.5);
+    position: absolute;
+    right: 12px;
+    bottom: 30px;
+    transform: rotate(45deg);
+  }
+  .go_main .main_line>div:first-child{
+    border-color: rgba(51, 51, 51, 0.25);
+    bottom: 40px;
+  }
+  .go_main .main_line>div:last-child{
+    border-color: rgba(51, 51, 51, 0.75);
+    bottom:20px;
+  }
+  @keyframes ex01{
+      0%{
+          opacity: 1;
+          bottom:25px;
+      }            
+      100%{
+          opacity: 0.2;
+          bottom: 70px;
+      }
+  }
+  
+  
+
+
+
+
+/* ======================================================태블릿 */
+@media(min-width: 768px){
+
+    h2{
+    margin: 50px 30px;
+    font-size: 45px;
+    font-weight: 700;
+    }
+    /* header 스타일 */
+    .header .main_logo{
+    padding-top:5px;
+    }
+    .header .main_logo>a{
+    font-size: 35px;
+    }
+    .header nav{
+    display:block!important;
+    float:right;
+    position:static;
+    background-color:transparent;
+    }
+    .header nav .main_nav{padding:0%}
+    .header nav .main_nav>li{
+    float:left;
+    border:none;
+    margin-right:1.5rem
+    }
+    .header nav .main_nav>li:last-child{margin-right:0}
+    .header nav .main_nav>li a{
+    color:#fff;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 3px 3px 3px black;
+    }
+    .header.active nav .main_nav>li a {
+    color: #000;
+    text-shadow: none;
+    }
+    .header .tgl_btn{display:none}
+
+    .swiper-button-prev:after,.swiper-button-next:after{
+    font-size:30px;
+    }
+
+    /* Iam 스타일 */
+    .i_am{
+    width: 90%;
+    }
+    .i_am .container{
+    flex-direction: row;
+    }
+    .iam_imgbox{
+    float: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom:none;
+    }
+    .info_img img{
+    width: 70%;
+    height: 70%;
+    }
+    .iam_imgbox p{
+    padding: 0 10%;
+    text-align: center;
+    }
+    .iam_txt{
+    float:right;
+    width: 50%;
+    padding:2% 0 0 5%;
+    }
+
+    /* skill 스타일 */
+    .skill h2{
+    margin-bottom: 20px;
+    padding: 3% 0 0 4.2%;
+    }
+    .skill .skill_top .p{
+    font-size: 22px;
+    }
+    .skill .skill_top span{
+    font-size: 24px;
+    }
+    .skill .skill_top .p2{
+    font-size: 16px;
+    }
+
+    .skill .content ul li{
+    width: 30%;
+    }
+    .skill_img{
+    width:30%;
+    }
+
+
+    /* portfolio 스타일 */
+    .portfolio{width: 90%;}
+    .port_content ul{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+    .port_content ul li{
+    width:40%;
+    margin-bottom:30px;
+    
+    }
+    .port_content ul li p{
+    height: 72px;
+    font-weight: 500;
+    }
+
+
+    /* contact 스타일 */
+
+    .contact .contact_content{
+    flex-flow: row nowrap;
+    }
+    .contact .contact_content li a{
+    height: 100%;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .contact .contact_content li a p{
+    padding-bottom: 20%;
+    }
+    .cont_img{
+     width: 35%;
+     margin-bottom: 50px;
+    }
+    .contact .contact_content li :hover span{
+    background-color:rgba(255, 140, 0, 0.5);
+    }
+
+    /* Top button 스타일 */
+    .go_main>a{
+    padding: 12px 7px;
+    border: 5px solid darkorange;
+    font-size: 18px;
+    font-weight: 600;
+    }
+    .go_main .main_line>.line {
+      width: 30px;
+      height: 30px;
+      right: 15px;
+      bottom: 35px;
+    }
+    .go_main .main_line>div:first-child{
+      bottom: 45px;
+    }
+    .go_main .main_line>div:last-child{
+      bottom: 25px;
+    }
+
+}
+
+
+
+/* ======================================================PC */
+@media(min-width:1200px){
+    .swiper-button-prev:after,.swiper-button-next:after{
+    font-size:40px;
+    }
+    /* header 스타일 */
+    .header .main_logo>a{
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 5px 5px 5px black;
+    }
+    .header nav .main_nav>li a{
+    font-size: 30px;
+    text-shadow: 5px 5px 5px black;
+    font-weight: 800;
+    }
+
+
+    /* i_Am 스타일*/
+    .i_am{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .iam_txt{
+    padding-top:3%;
+    }
+    .iam_txt li{
+        font-size: 18px;
+    }
+
+
+    /* skill 스타일 */
+    .skill{
+    height: 500px;
+    position: relative;
+    }
+    .skill h2{
+    padding-top: 0;
+    padding-left: 10%;
+    }
+    .skill .skill_top{
+        width:55%;
+        float: left;
+    }
+    .skill .skill_top .p_box{
+    padding-left:15%;
+    padding-top: 1%;
+    }
+    .skill .content .img_box ul{
+        width: 45%;
+        float:right; 
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        position: absolute;
+        top:25%;
+        right:0;
+    }
+    .skill_img{
+        width:35%;
+    }
+
+
+    /* port 스타일 */
+    .port_content ul{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .port_content ul li{
+    width:20%;
+    margin: 0;
+    }
+
+    /* contact 스타일 */
+    .cont_img{
+     width: 40%;
+    }
+}
+
+
